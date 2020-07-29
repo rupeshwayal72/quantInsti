@@ -1,0 +1,26 @@
+QuantInsti Test 2:
+
+1. Initial state should be S0 for every resource.
+Means all resources process flow must begin from State S0.
+
+2. At endpoint '/start' resource should be created successfully at State S0 only if there is only one parameter 'user ID'.
+ For successful resource creation,resource state should be changed from S0 -> S1. 
+
+3. At Endpoint '/start' Only one parameter 'user ID' should be allowed,
+For other/extra parameters apart from 'user ID' system should fail resource creation.
+For failed resource creation,resource state should be changed from S0 -> S5.
+
+4. Endpoint '/run' should take 'user ID' as a parameter and should validate that resource belongs to that particular 'user ID' and also validate it's state is S1 or not.
+
+5. At Endpoint '/run' if 'user ID' is valid and current resource State is S1 then resource state should be changed from  S1 -> S2 - S3 sequentially.
+
+6. At Endpoint '/run' if 'user ID' is invalid or current resource State is not S1 then resource state should be changed from  S1 -> S5.
+
+7. Endpoint '/stop' should take 'user ID' as a parameter and should validate that resource belongs to that particular 'user ID' and also validate it's state is S3 or not.
+
+8. At Endpoint '/stop' if 'user ID' is valid and current resource State is S3 then resource state should be changed from  S3 -> S4 -> S5 sequentially. 
+
+9. At Endpoint '/stop' if 'user ID' is invalid or current resource State is not S3 then resource state should be changed from   S3 -> S5.
+
+
+

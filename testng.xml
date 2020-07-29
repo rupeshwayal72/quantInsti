@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="QuantInsti">
+	<listeners>
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+	</listeners>
+	<test name="QuantIntiTest">
+		<classes>
+			<class name="assignments.QuantInstiTest1" />
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
